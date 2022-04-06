@@ -1,0 +1,50 @@
+@import "/src/assets/scss/colors";
+@import "/src//assets/scss/mixins";
+
+.active {
+  font-weight: 600;
+}
+
+.navbar {
+  height: 8vh;
+  width: 100vw;
+  padding: 20px 180px;
+
+  .logo {
+    float: left;
+    color: $light-green;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    overflow: hidden;
+    float: right;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  li a {
+    color: $dark-grey;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.login-btn {
+  @include filled-btn;
+  height: 50px;
+}
+
+.register-btn {
+  @include transparent-btn;
+  height: 50px;
+}

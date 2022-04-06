@@ -1,0 +1,25 @@
+{
+  "devices": [
+    {
+      "id": 2,
+      "device": "Air Conditioner",
+      "room": 1,
+      "floor": 2,
+      "status": true
+    },
+    {
+      "id": 4,
+      "device": "Lighting",
+      "room": 2,
+      "floor": 1,
+      "status": false
+    },
+    {
+      "id": 5,
+      "device": "Wifi",
+      "room": 3,
+      "floor": 1,
+      "status": true
+    }
+  ]
+}

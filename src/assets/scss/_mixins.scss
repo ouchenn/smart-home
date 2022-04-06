@@ -1,0 +1,35 @@
+@import "colors";
+
+@mixin btn {
+  font-weight: bold;
+  padding: 15px;
+  background-position: left bottom;
+  cursor: pointer;
+  transition: all ease 0.3s;
+
+  &:hover {
+    background-position: right top;
+  }
+}
+
+@mixin filled-btn {
+  @include btn;
+  color: white;
+  border: none;
+  background: linear-gradient(to right, $light-green 50%, $dark-green 50%);
+  background-size: 200% 100%;
+}
+
+@mixin transparent-btn {
+  @include btn;
+  color: $dark-green;
+  border: 1;
+  border-color: $dark-green;
+  border-style: solid;
+  background: linear-gradient(to right, transparent 50%, $dark-green 50%);
+  background-size: 200% 100%;
+
+  &:hover {
+    color: white;
+  }
+}

@@ -1,0 +1,27 @@
+<div>
+    <a routerLink="/new-device">Add New</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Device</th>
+                <th>Floor</th>
+                <th>Room</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let device of devicesList">
+                <td>{{device.id}}</td>
+                <td>{{device.device}}</td>
+                <td>{{device.floor}}</td>
+                <td>{{device.room}}</td>
+                <td [ngClass]="device.status ? 'active' : 'inactive'">{{device.status}}</td>
+                <td>
+                    <input class="switch-checkbox" type="checkbox" [checked]="device.status" (change)="deviceStatusSwitch(device)">
+                    <button type="button" (click)="deleteDevice(device.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

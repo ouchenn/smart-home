@@ -1,0 +1,17 @@
+<div>
+    <div>
+        <h3>New Device</h3>
+        <div>
+            <input type="text" [(ngModel)]="deviceDetails.device" placeholder="Name">
+        </div>
+        <div>
+            <input type="number" [(ngModel)]="deviceDetails.floor" placeholder="Floor">
+        </div>
+        <div>
+            <input type="number" [(ngModel)]="deviceDetails.room" placeholder="Room">
+        </div>
+        <div>
+            <button (click)="addDevice(deviceDetails)">Add Device</button>
+        </div>
+    </div>
+</div>
